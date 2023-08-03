@@ -20,6 +20,6 @@ class Bot(Client):
     async def start(self):
         await super().start()
         me = await self.get_me()
-        print("Pʟᴇᴀꜱᴇ Mᴀᴋᴇ Tʜɪꜱ Iꜱ Aᴅᴍɪɴ Iɴ Yᴏᴜʀ Lᴏɢ Cʜᴀɴɴᴇʟ")
+        print(f"{me.first_name} Iꜱ Sᴛᴀʀᴛᴇᴅ.....💖")
 
 Bot().run()
