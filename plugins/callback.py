@@ -1,5 +1,5 @@
+from pyrogram import Client
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
-
 
 @Client.on_callback_query()
 async def cb_handler(client, query: CallbackQuery):
