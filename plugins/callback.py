@@ -21,4 +21,8 @@ async def cb_handler(client, query: CallbackQuery):
     elif data == "premium":
         await query.message.edit_text(text="premium {}".format(user.mention), disable_web_page_preview=True)
     elif data == "more":
-        await query.message.edit_text(text="more {}".format(user.mention), disable_web_page_preview=True)
+        button = InlineKeyboardMarkup([[
+            InlineKeyboardButton("Back 🧑‍🦯", callback_data='start'),
+            InlineKeyboardButton('💰 Donate', callback_data='donate')
+        ]])
+        await query.message.edit_text(text="more {}".format(user.mention), reply_markup=button, disable_web_page_preview=True)
