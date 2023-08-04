@@ -7,10 +7,10 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 async def start(client, message):
     user = message.from_user
     button = InlineKeyboardMarkup([[
-        InlineKeyboardButton("Help & Settings", callback_data='help')
+            InlineKeyboardButton("Help & Settings", callback_data='help')
         ],[
-        InlineKeyboardButton('🎟️ Upgrade', callback_data='upgrade'),
-        InlineKeyboardButton('🗣️ More', callback_data='more')
+            InlineKeyboardButton('🎟️ Upgrade', callback_data='premium'),
+            InlineKeyboardButton('🗣️ More', callback_data='more')
     ]])
     await message.reply_text(text=script.START_TXT.format(user.mention), reply_markup=button, disable_web_page_preview=True)
    
